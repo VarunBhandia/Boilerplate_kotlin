@@ -4,6 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import android.graphics.Color
+import android.util.TypedValue
+import android.view.ViewGroup
+import android.widget.RelativeLayout
+import android.widget.TextView
+import android.widget.Toast
 
 class LanguageActivity : AppCompatActivity() {
 
@@ -11,12 +17,18 @@ class LanguageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_language)
 
+        val layout = findViewById<RelativeLayout>(R.id.root)
+
+        // Create TextView programmatically.
+        val textView = TextView(this)
+
         val languages = resources.getStringArray(R.array.Languages)
-        val languages_details = resources.getStringArray(R.array.languages_details)
+        val languagesDetails = resources.getStringArray(R.array.languages_details)
 
         // access the spinner
         val spinner = findViewById<Spinner>(R.id.spinner)
         if (spinner != null) {
+
             val adapter = ArrayAdapter(this,
                 android.R.layout.simple_spinner_item, languages)
             spinner.adapter = adapter
@@ -25,9 +37,18 @@ class LanguageActivity : AppCompatActivity() {
                 AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(parent: AdapterView<*>,
                                             view: View, position: Int, id: Long) {
-                    Toast.makeText(this@LanguageActivity,
-                        getString(R.string.selected_item) + " " +
-                                "" + languages_details[position], Toast.LENGTH_SHORT).show()
+
+                    layout?.removeView(textView)
+                    // setting height and width
+                    textView.layoutParams= RelativeLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT)
+                    // setting text
+                    textView.setText(languagesDetails[position])
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20f)
+
+                    layout ?.addView(textView)
+
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
