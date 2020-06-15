@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Assignment</string>
+    <string name="selected_item">Selected item:</string>
+
+    <string-array name="Languages">
+        <item>English</item>
+        <item>Hindi</item>
+    </string-array>
+    <string-array name="languages_details">
+        <item>Krishna represents love, wisdom, intellect and the 700 verses of the Bhagwad Geeta contain a vast sea of knowledge. It gives us the message to keep doing our duty without worrying about the result.</item>
+        <item>कृष्ण प्रेम, ज्ञान, बुद्धि का प्रतिनिधित्व करते हैं और भगवत गीता के 700 श्लोकों में ज्ञान का एक विशाल समुद्र समाहित है। यह हमें परिणाम के बारे में चिंता किए बिना अपना कर्तव्य करते रहने का संदेश देता है।</item>
+    </string-array>
 </resources>
