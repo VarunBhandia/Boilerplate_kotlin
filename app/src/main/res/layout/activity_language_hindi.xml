@@ -7,18 +7,48 @@
     tools:context=".LanguageHindiActivity">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="313dp"
-        android:layout_height="560dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="40dp"
-        android:text="कृष्ण प्रेम, ज्ञान, बुद्धि का प्रतिनिधित्व करते हैं और भगवत गीता के 700 श्लोकों में ज्ञान का एक विशाल समुद्र समाहित है। यह हमें परिणाम के बारे में चिंता किए बिना अपना कर्तव्य करते रहने का संदेश देता है।"
-        android:textSize="20sp"
+        android:id="@+id/txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:text="Select language:"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtView"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="138dp"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="288dp"
+        android:layout_height="366dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="138dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="109dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtView"
+        tools:context=".LanguageActivity"></RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
