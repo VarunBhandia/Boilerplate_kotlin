@@ -12,12 +12,17 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_activity)
 
-        val button = findViewById<Button>(R.id.button)
-        button.setOnClickListener{
+        val button_english = findViewById<Button>(R.id.button_english)
+        button_english.setOnClickListener{
             val intent = Intent(this, LanguageActivity::class.java)
             startActivity(intent)
         }
+
+        val button_hindi = findViewById<Button>(R.id.button_hindi)
+        button_hindi.setOnClickListener{
+            val intent = Intent(this, LanguageHindiActivity::class.java)
+            startActivity(intent)
+        }
+
     }
-
-
 }

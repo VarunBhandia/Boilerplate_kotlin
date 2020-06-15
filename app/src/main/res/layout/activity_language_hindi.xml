@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LanguageActivity">
+    tools:context=".LanguageHindiActivity">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="313dp"
         android:layout_height="560dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="Krishna represents love, wisdom, intellect and the 700 verses of the Bhagwad Geeta contain a vast sea of knowledge. It gives us the message to keep doing our duty without worrying about the result."
+        android:layout_marginRight="40dp"
+        android:text="कृष्ण प्रेम, ज्ञान, बुद्धि का प्रतिनिधित्व करते हैं और भगवत गीता के 700 श्लोकों में ज्ञान का एक विशाल समुद्र समाहित है। यह हमें परिणाम के बारे में चिंता किए बिना अपना कर्तव्य करते रहने का संदेश देता है।"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
