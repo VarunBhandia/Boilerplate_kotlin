@@ -28,7 +28,7 @@ class LanguageActivity : AppCompatActivity() {
         if (spinner != null) {
 
             val adapter = ArrayAdapter(this,
-                android.R.layout.simple_spinner_item, languages)
+                android.R.layout.simple_spinner_dropdown_item, languages)
             spinner.adapter = adapter
 
             spinner.onItemSelectedListener = object :
@@ -43,7 +43,7 @@ class LanguageActivity : AppCompatActivity() {
                         ViewGroup.LayoutParams.WRAP_CONTENT)
                     // setting text
                     textView.setText(languagesDetails[position])
-                    textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20f)
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25f)
 
                     layout ?.addView(textView)
 
